@@ -16,5 +16,5 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS $ARTIFACTORY_DOCKER_REPOSITORY
+      - docker login -e $ARTIFACTORY_EMAIL -u $ARTIFACTORY_USERNAME -p $ARTIFACTORY_PASSWORD $ARTIFACTORY_DOCKER_REPOSITORY
       - docker push $ARTIFACTORY_DOCKER_REPOSITORY/artifactory-alpine:$CIRCLE_BUILD_NUM
