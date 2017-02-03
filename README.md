@@ -26,4 +26,4 @@ In this example `$ARTIFACTORY_DOCKER_REPOSITORY=gcartifactory-us.jfrog.info:5005
 You should be able to see published Docker image in Artifactory.
 ![screenshot](img/Screen_Shot3.png)
 
-##Note: `This solution only support Artifactory with valid ssl`
+##Note: `This solution only supports Artifactory with valid ssl as Circle CI does not support insecure docker registry `
