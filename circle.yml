@@ -20,7 +20,6 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker login -e $ARTIFACTORY_EMAIL -u $ARTIFACTORY_USERNAME -p $ARTIFACTORY_PASSWORD $ARTIFACTORY_DOCKER_REPOSITORY
-      - docker push $ARTIFACTORY_DOCKER_REPOSITORY/node-version:$CIRCLE_BUILD_NUM
+      - ./jfrog rt dp $ARTIFACTORY_DOCKER_REPOSITORY/node-version:$CIRCLE_BUILD_NUM docker-dev --build-name=circleci-docker-artifactory --build-number=$CIRCLE_BUILD_NUM
       - ./jfrog rt bce circleci-docker-artifactory $CIRCLE_BUILD_NUM
       - ./jfrog rt bp circleci-docker-artifactory $CIRCLE_BUILD_NUM
