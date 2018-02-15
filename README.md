@@ -17,7 +17,7 @@ Enable your project in CircleCI.
 
 ##### Step 3:
 
-add Environment Variables `ARTIFACTORY_USERNAME`, `ARTIFACTORY_EMAIL`, `ARTIFACTORY_DOCKER_REPOSITORY` and `ARTIFACTORY_PASSWORD` in build settings of CircleCI.
+add Environment Variables `ARTIFACTORY_USER`, `ARTIFACTORY_EMAIL`, `ARTIFACTORY_DOCKER_REPOSITORY` and `ARTIFACTORY_PASSWORD` in build settings of CircleCI.
 In this example `$ARTIFACTORY_DOCKER_REPOSITORY=gcartifactory-us.jfrog.info:5005`
 ![screenshot](img/Screen_Shot2.png)
 
