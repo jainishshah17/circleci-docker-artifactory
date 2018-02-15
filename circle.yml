@@ -8,7 +8,6 @@ dependencies:
     - chmod +x jfrog
     - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_PASSWORD --interactive false
   override:
-    - docker info
     - docker build --rm=false -t $ARTIFACTORY_DOCKER_REPOSITORY/node-version:$CIRCLE_BUILD_NUM .
 
 test:
