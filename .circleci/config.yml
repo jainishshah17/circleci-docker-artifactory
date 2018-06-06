@@ -8,6 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: node:8
+      - image: docker:17.05.0-ce-git
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -18,6 +19,12 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+
       # Install JFrog CLI
       - run: curl -fL https://getcli.jfrog.io | sh
       # Configure Artifactory instance with JFrog CLI
